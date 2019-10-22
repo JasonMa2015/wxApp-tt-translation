@@ -1,0 +1,3 @@
+<!--pages/about-us/index.wxml-->
+<view>关于我们</view>
+<tabbar tabBar="{{tabBar}}" />

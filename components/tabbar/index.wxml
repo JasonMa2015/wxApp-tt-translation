@@ -1,0 +1,10 @@
+<!--components/tabbar/tabbar.wxml-->
+<view class="tab-bar-wrap">
+  <view class="tab-bar">
+    <block wx:for="{{tabBar.list}}" wx:key="pagePath" wx:index="idx">
+      <view catchtap="openPage" data-open-url="{{ item.pagePath }}" data-text="{{item.text}}" data-open-type="redirect" class="{{item.clas}} tab-item">
+        <text class="tabbar-txt">{{item.text}}</text>
+      </view>
+    </block>
+  </view>
+</view>

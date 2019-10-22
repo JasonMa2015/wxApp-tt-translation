@@ -1,13 +1,18 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  <view class="section">
+    <textarea class="page-textarea" bindblur="bindTextAreaBlur" placeholder="请输入要翻译的内容" />
+  </view>
+  
+  <view class="section">
+    <block wx:for="{{tabBar.list}}" wx:key="pagePath" wx:index="idx">
+      <view class="language-item">
+        <text class="tabbar-txt">{{item.text}}</text>
+      </view>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="section">
+    译文
   </view>
 </view>
+<tabbar tabBar="{{tabBar}}" />

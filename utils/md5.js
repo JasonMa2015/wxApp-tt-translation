@@ -198,3 +198,7 @@ var MD5 = function (string) {
   
     return temp.toLowerCase();
 }
+
+export {
+  MD5
+}

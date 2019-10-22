@@ -34,6 +34,49 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    tabBar: {
+      color: "#FFFFFF",
+      fontSize: '26rpx',
+      selectedColor: "#F56D23",
+      selectedBgColor: "#030303",
+      backgroundColor: "#FFFFFF",
+      borderStyle: "#ccc",
+      list: [
+        {
+          pagePath: "/pages/home/index",
+          text: "翻译"
+        },
+        {
+          pagePath: "/pages/logs/index",
+          text: "日志"
+        },
+        {
+          pagePath: "/pages/about-us/index",
+          text: "关于我们"
+        }
+      ],
+      position: "bottom"
+    }
+  },
+  //底部tabbar
+  editTabBar() {
+    //使用getCurrentPages可以获取当前加载中所有的页面对象的一个数组，数组最后一个就是当前页面。
+    var curPageArr = getCurrentPages(); //获取加载的页面
+    var curPage = curPageArr[curPageArr.length - 1]; //获取当前页面的对象
+    var pagePath = curPage.route; //当前页面url
+    if (pagePath.indexOf("/") != 0) {
+      pagePath = "/" + pagePath;
+    }
+    var tabBar = this.globalData.tabBar;
+    for (var i = 0; i < tabBar.list.length; i++) {
+      tabBar.list[i].active = false;
+      if (tabBar.list[i].pagePath == pagePath) {
+        tabBar.list[i].active = true; //根据页面地址设置当前页面状态
+      }
+    }
+    curPage.setData({
+      tabBar: tabBar
+    });
   }
 })

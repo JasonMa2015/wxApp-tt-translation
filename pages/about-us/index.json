@@ -2,5 +2,5 @@
   "usingComponents": {
     "tabbar": "/components/tabbar/index"
   },
-  "navigationBarTitleText": "首页"
+  "navigationBarTitleText": "关于我们"
 }
