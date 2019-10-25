@@ -6,7 +6,7 @@ class HTTP {
   request({
     url = '',
     data = {},
-    method = 'GET',
+    method = 'POST',
     header = {}
   }) {
     return new Promise((resolve, reject) => {
@@ -44,7 +44,7 @@ class HTTP {
   _show_error(error_code, error_msg) {
     const tip = error_msg
     wx.showToast({
-      title: tip ? tip : config.tips['front_1'],
+      title: tip ? tip : config.tips['msg1'],
       icon: 'none',
       duration: 2000
     })

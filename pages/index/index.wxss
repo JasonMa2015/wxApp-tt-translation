@@ -1,3 +1,0 @@
-/**index.wxss**/
-.container{padding: 20rpx;}
-.page-textarea{height: 160rpx;border: 1rpx solid #e7e7e7;border-radius: 6rpx;font-size: 26rpx;padding: 10rpx;}

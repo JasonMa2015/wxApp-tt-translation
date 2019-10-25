@@ -1,9 +1,10 @@
 <!--components/tabbar/tabbar.wxml-->
 <view class="tab-bar-wrap">
   <view class="tab-bar">
-    <block wx:for="{{tabBar.list}}" wx:key="pagePath" wx:index="idx">
-      <view catchtap="openPage" data-open-url="{{ item.pagePath }}" data-text="{{item.text}}" data-open-type="redirect" class="{{item.clas}} tab-item">
-        <text class="tabbar-txt">{{item.text}}</text>
+    <block wx:for="{{ tabBar }}" wx:key="pagePath">
+      <view class="tabBar-item" catchtap="openPage" data-open-url="{{ item.pagePath }}" data-text="{{item.text}}" data-open-type="redirect" >
+        <image src="{{item.active ? item.selectedIconPath : item.iconPath}}" class="tabBarIco"></image>
+        <view class="tabbar-txt {{item.active ? 'curPage' : ''}}">{{item.text}}</view>
       </view>
     </block>
   </view>

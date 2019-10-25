@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "tabbar": "/components/tabbar/index"
+  },
+  "navigationBarTitleText": "历史记录"
+}

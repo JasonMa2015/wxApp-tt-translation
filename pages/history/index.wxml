@@ -1,0 +1,13 @@
+<!--logs.wxml-->
+<view class="container history-list">
+  <view class="history-title">历史记录：</view>
+  <block wx:for="{{historys}}" wx:for-item="item" wx:key="key">
+    <view class="history-item">
+      <view>{{item.sourceVal}}</view>
+      <view>{{item.translationVal}}</view>
+    </view>
+  </block>
+  <view class="delHisMsg" style="{{ historys ? 'display: none' : 'display: block' }}" bindtap="delHis">无记录,去翻译吧！</view>
+  <view class="delHis" style="{{ historys ? 'display: block' : 'display: none' }}" bindtap="delHis">清空历史记录</view>
+</view>
+<tabbar tabBar="{{tabBar}}" />

@@ -1,11 +1,6 @@
 //app.js
 App({
   onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
     // 登录
     wx.login({
       success: res => {
@@ -45,15 +40,21 @@ App({
       list: [
         {
           pagePath: "/pages/home/index",
-          text: "翻译"
+          text: "翻译",
+          iconPath: '/images/tabBar/fanyi.png',
+          selectedIconPath: '/images/tabBar/fanyi-s.png'
         },
         {
-          pagePath: "/pages/logs/index",
-          text: "日志"
+          pagePath: "/pages/history/index",
+          text: "历史记录",
+          iconPath: '/images/tabBar/his.png',
+          selectedIconPath: '/images/tabBar/his-s.png'
         },
         {
           pagePath: "/pages/about-us/index",
-          text: "关于我们"
+          text: "关于我们",
+          iconPath: '/images/tabBar/aboutus.png',
+          selectedIconPath: '/images/tabBar/aboutus-s.png'
         }
       ],
       position: "bottom"
@@ -62,21 +63,22 @@ App({
   //底部tabbar
   editTabBar() {
     //使用getCurrentPages可以获取当前加载中所有的页面对象的一个数组，数组最后一个就是当前页面。
-    var curPageArr = getCurrentPages(); //获取加载的页面
-    var curPage = curPageArr[curPageArr.length - 1]; //获取当前页面的对象
-    var pagePath = curPage.route; //当前页面url
+    let curPageArr = getCurrentPages(); //获取加载的页面
+    let curPage = curPageArr[curPageArr.length - 1]; //获取当前页面的对象
+    let pagePath = curPage.route; //当前页面url
+
     if (pagePath.indexOf("/") != 0) {
       pagePath = "/" + pagePath;
     }
-    var tabBar = this.globalData.tabBar;
-    for (var i = 0; i < tabBar.list.length; i++) {
-      tabBar.list[i].active = false;
-      if (tabBar.list[i].pagePath == pagePath) {
-        tabBar.list[i].active = true; //根据页面地址设置当前页面状态
+    let tabBars = this.globalData.tabBar.list;
+    for (let i = 0; i < tabBars.length; i++) {
+      tabBars[i].active = false;
+      if (tabBars[i].pagePath == pagePath) {
+        tabBars[i].active = true; //根据页面地址设置当前页面状态
       }
     }
     curPage.setData({
-      tabBar: tabBar
+      tabBar: tabBars
     });
   }
 })

@@ -1,3 +1,16 @@
 <!--pages/about-us/index.wxml-->
-<view>关于我们</view>
+<view class="about-content">
+  <view class="pro-js">该项目使用了百度翻译开放平台api，由于是免费版的，所以功能比较单调。如有其它需求可以联系我们。</view>
+  <view class="about-box">
+    <view class="about-title"><image class="about-title-ico" src="{{ titleIco.aboutUs }}"></image></view>
+    <view class="zwjs">我们由一群九零后组成，我们年轻有激情、有丰富的创造力、有极强的学习能力。团队成员曾就职于BAT、中国搜索、数据宝等公司，技术过硬，经验丰富。我们不怕项目多，我们只怕自己太过安逸埋没我们对未来的冲劲。我们提供一站式服务。不用担心贵公司人手不够，您们欠缺的人手我们都可以提供。欢迎骚扰！</view>
+    <view class="ywfw"><text style="font-weight: bold;color:red;">业务范围：</text>微信小程序、微信公众号、企业官网、企业管理系统、营销型网站、商城型网站、集团网站、CRM系统、OA系统以及网站维护等等</view>
+  </view>
+  <view class="contactus">
+    <view class="about-title"><image class="about-title-ico" src="{{ titleIco.contactus }}"></image></view>
+    <view>QQ: 1049113996</view>
+    <view>邮箱: 1049113996@qq.com</view>
+  </view>
+</view>
 <tabbar tabBar="{{tabBar}}" />
+

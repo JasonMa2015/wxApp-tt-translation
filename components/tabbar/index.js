@@ -21,7 +21,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    
     openPage(e) {
       // console.log("tabbarq切换===",e.currentTarget.dataset)
       const { openType, openUrl, text } = e.currentTarget.dataset
@@ -35,6 +34,9 @@ Component({
         pagePath = '/' + pagePath;
       }
       // console.log('editTabBar当前页面1===',pagePath)
+
+      console.log(pagePath)
+      console.log(openUrl)
       if (pagePath !== openUrl) {
         if (openType === "navigate") {
           wx.navigateTo({

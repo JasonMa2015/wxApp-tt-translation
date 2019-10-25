@@ -1,11 +1,15 @@
 // pages/about-us/index.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    titleIco: {
+      aboutUs: '../../images/aboutme.png',
+      contactus: '../../images/lx.png'
+    }
   },
 
   /**
