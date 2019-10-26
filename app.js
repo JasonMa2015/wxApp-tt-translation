@@ -52,7 +52,7 @@ App({
         },
         {
           pagePath: "/pages/about-us/index",
-          text: "关于我们",
+          text: "项目介绍",
           iconPath: '/images/tabBar/aboutus.png',
           selectedIconPath: '/images/tabBar/aboutus-s.png'
         }

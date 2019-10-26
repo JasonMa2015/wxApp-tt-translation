@@ -25,7 +25,8 @@ Page({
     language: Language,
     translationVal: '',
     targetLan: '',
-    sourceVal: ''
+    sourceVal: '',
+    currentTab: 'auto'
   },
 
   /**
@@ -64,7 +65,8 @@ Page({
     }
     let lantype = event.currentTarget.dataset.lantype;
     this.setData({
-      targetLan: lantype
+      targetLan: lantype,
+      currentTab: lantype
     });
 
     this.translate(this.data.sourceVal, lantype);

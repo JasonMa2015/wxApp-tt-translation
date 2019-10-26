@@ -9,5 +9,6 @@
   </block>
   <view class="delHisMsg" style="{{ historys ? 'display: none' : 'display: block' }}" bindtap="delHis">无记录,去翻译吧！</view>
   <view class="delHis" style="{{ historys ? 'display: block' : 'display: none' }}" bindtap="delHis">清空历史记录</view>
+  <view style="height: 130rpx;"></view>
 </view>
 <tabbar tabBar="{{tabBar}}" />

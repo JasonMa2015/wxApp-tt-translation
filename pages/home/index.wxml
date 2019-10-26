@@ -1,14 +1,14 @@
 <!--index.wxml-->
 <view class="container">
   <view class="section textarea-box">
-    <textarea class="page-textarea" bindinput="listenInput" show-confirm-bar="{{false}}" value="{{sourceVal}}" placeholder="请输入要翻译的内容" />
     <view class="clearn" style="{{sourceVal ? 'display: block' : 'display: none'}}" bindtap="clearSourceVal">X</view>
+    <view class="textarea-detail"><textarea class="page-textarea" bindinput="listenInput" show-confirm-bar="{{false}}" value="{{sourceVal}}" placeholder="请输入要翻译的内容" /></view>
   </view>
   
   <view class="section tolan">
     <view class="language-box">
       <block id="{{key}}" wx:for="{{ language }}" wx:for-index="key" wx:for-item="value" wx:key="key" data-val="{{ value }}">
-        <view class="language-item {{key === '自动' ? 'cur' : ''}}" bindtap="onTapdetail" data-lantype="{{ value }}">{{ key }}</view>
+        <view class="language-item {{currentTab === value ? 'cur' : ''}}" bindtap="onTapdetail" data-lantype="{{ value }}">{{ key }}</view>
       </block>
     </view>
   </view>

@@ -2,8 +2,9 @@
 .container{width: 100%;margin-top: 20rpx;}
 .section{padding: 0 20rpx;}
 .textarea-box{width: 100%;position: relative;}
-.clearn{position: absolute;top: 10rpx;right: 40rpx;font-size: 26rpx;color: #777;z-index: 99999;}
-.page-textarea{width: 100%;height: 160rpx;border: 1rpx solid #e7e7e7;border-radius: 6rpx;font-size: 32rpx;padding: 10rpx;}
+.textarea-detail{position: relative;top: 0;left: 0;z-index: 10;width: 100%;height: 160rpx;}
+.clearn{position: absolute;top: 10rpx;right: 30rpx;width: 30rpx;height: 30rpx;line-height: 30rpx;text-align: center;font-size: 18rpx;color: #777;z-index: 99999;background: #eee;border-radius: 15rpx;}
+.page-textarea{width: 100%;height: 160rpx;border: 1rpx solid #e7e7e7;border-radius: 6rpx;font-size: 32rpx;padding: 10rpx;z-index: 1;}
 .tolan{border-bottom: 1px solid #e7e7e7;box-shadow: 0 5rpx 10rpx #e7e7e7;padding-bottom: 6rpx;}
 .language-box{width: 100%;height: 80rpx;line-height: 80rpx;overflow:hidden;overflow-x:scroll;-webkit-overflow-scrolling:touch;white-space: nowrap;}
 .language-item{display: inline-block;margin-right: 15rpx;font-size: 32rpx; color: #333;}
